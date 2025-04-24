@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "./pages/Home"; // Updated path for Home.js
-import Contact from "./pages/Contact"; // Updated path for Contact.js
-import TeamSection from "./pages/TeamSection"; // Updated path for TeamSection.js
-import Footer from "./components/Footer"; // Path remains the same
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import TeamSection from "./pages/TeamSection";
+import Footer from "./components/Footer";
 
 function App() {
   const profiles = {
