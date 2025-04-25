@@ -15,3 +15,104 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Custom transition for logo movement */
+.logo-transition {
+  transition: all 1s ease-in-out;
+}
+
+.logo-clicked {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  transform: translate(50%, -50%);
+  width: 8rem;
+  height: 8rem;
+}
+
+/* Custom styles for the logo (for both the first and second logos) */
+#logo {
+  transition: transform 0.8s ease, box-shadow 0.8s ease, filter 0.8s ease;
+  animation: breathe 3s ease-in-out infinite, colorChange 6s ease-in-out infinite;
+  width: 300px; /* Larger width for both logos */
+  height: 300px; /* Larger height for both logos */
+  border-radius: 120%;
+  object-fit: cover;
+}
+
+/* Hover effect for both logos */
+#logo:hover,
+#logo-about:hover {
+  transform: scale(1.1); /* Slightly scale up */
+  box-shadow: 0px 0px 30px 10px rgba(255, 140, 0, 1); /* Orange glow */
+}
+
+/* Breathing animation for both logos */
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Color change animation for both logos */
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg); /* Normal color */
+  }
+  50% {
+    filter: hue-rotate(60deg); /* Change hue (shift color) */
+  }
+  100% {
+    filter: hue-rotate(0deg); /* Back to original color */
+  }
+}
+
+/* Breathing animation for About logo (optional) */
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+/* Animation for logo appear */
+@keyframes logoAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Updated About logo styles */
+#logo-about {
+  animation: logoAppear 1s ease-out forwards, breathe 3s ease-in-out infinite, colorChange 6s ease-in-out infinite; /* All animations applied */
+  width: 500px; /* Wider width for the About logo */
+  height: 400px; /* Keep the height the same */
+  border-radius: 100%; /* Make it more rectangular with rounded edges */
+}
+
+/* Hover effect for About logo */
+#logo-about:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 5px #ffcc00;
+}

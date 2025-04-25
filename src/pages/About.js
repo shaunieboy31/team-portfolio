@@ -1,14 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import logoimg from "../assets/img/logo.jpg";
 
 function About() {
   return (
-    <section id="about" className="relative py-20 px-[10%] bg-[#0f0f0f] flex flex-col md:flex-row items-center">
-      <img
-        src={logoimg}
-        alt="Logo"
-        className="w-48 h-48 md:w-64 md:h-64 rounded-full mb-8"
-      />
+    <section
+      id="about"
+      className="relative py-20 px-[10%] bg-[#0f0f0f] flex flex-col md:flex-row items-center"
+    >
+      <Link to="/team"> {/* Wrap logo in a Link to make it clickable */}
+        <img
+          id="logo-about"  // Same ID for the breathing effect
+          src={logoimg}
+          alt="Logo"
+          className="w-48 h-48 md:w-64 md:h-64 rounded-full mb-8"
+        />
+      </Link>
       <div className="ml-[25%] text-center md:text-left">
         <h2 className="text-4xl text-[#ffcc70] mb-5">About Us</h2>
         <p className="text-gray-300 mb-10">

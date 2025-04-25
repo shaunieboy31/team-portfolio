@@ -1,4 +1,3 @@
-// src/App.js
 import React from "react";
 import {
   HashRouter as Router,
@@ -29,6 +28,7 @@ import jhonImg    from "./assets/img/jhon_mark_morales.jpg";
 import binalotImg from "./assets/img/binalot.png";
 import kjeImg     from "./assets/img/kje.jpg";
 
+// Team Member Profiles
 const profiles = {
   "Shaun Russelle Obsenares": {
     image: shaunImg,
@@ -69,8 +69,8 @@ const profiles = {
     ],
     skills: ["Canva", "CSS", "HTML", "Tailwind CSS"],
     resume: "/resume/cristel.pdf",
-    facebook: "https://facebook.com/kate",
-    instagram: "https://instagram.com/kate",
+    facebook: "https://facebook.com/cristel",
+    instagram: "https://instagram.com/cristel",
   },
   "Cherly Vic Bakilid": {
     image: cherlyImg,
@@ -83,8 +83,8 @@ const profiles = {
     ],
     skills: ["Document"],
     resume: "/resume/che.pdf",
-    facebook: "https://facebook.com/kate",
-    instagram: "https://instagram.com/kate",
+    facebook: "https://facebook.com/cherly",
+    instagram: "https://instagram.com/cherly",
   },
   "Jhon Mark Morales": {
     image: jhonImg,
@@ -97,18 +97,18 @@ const profiles = {
     ],
     skills: ["Document"],
     resume: "/resume/jm.pdf",
-    facebook: "https://facebook.com/kate",
-    instagram: "https://instagram.com/kate",
+    facebook: "https://facebook.com/jhon",
+    instagram: "https://instagram.com/jhon",
   },
 };
 
+// Projects Data
 const projects = [
   {
     title: "UYY BINALOT",
     desc: "A POS system designed for restaurants...",
     img: binalotImg,
     link: `${process.env.PUBLIC_URL}/projects/Binalots/Binalots/home.html`
-
   },
   {
     title: "KJE PRINTING",
@@ -119,7 +119,7 @@ const projects = [
   },
 ];
 
-
+// Layout component (common structure for the app)
 function Layout() {
   return (
     <div className="bg-[#0f0f0f] text-white min-h-screen flex flex-col">
@@ -132,11 +132,12 @@ function Layout() {
   );
 }
 
+// App component with routing and layout
 export default function App() {
   return (
     <Router>
       <Routes>
-        {/* wrap all routes in Layout */}
+        {/* Wrap all routes in Layout */}
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="portfolio" element={<Portfolio profiles={profiles} />} />
@@ -144,7 +145,7 @@ export default function App() {
           <Route path="projects" element={<Projects projects={projects} />} />
           <Route path="team" element={<TeamSection profiles={profiles} />} />
           <Route path="contact" element={<Contact />} />
-          {/* any unknown hash-route → back to home */}
+          {/* Any unknown hash-route will navigate back to home */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

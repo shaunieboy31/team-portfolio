@@ -1,22 +1,54 @@
 import React from "react";
-import logoimg from "../assets/img/logo.jpg";
+import { Link } from "react-router-dom";
+import logo from "../assets/img/logo.jpg"; // adjust if your path differs
 
 function Home() {
   return (
-    <section
-      className="bg-[#0f0f0f] text-white min-h-screen flex flex-col justify-center items-center px-4"
-    >
-      {/* Bigger logo, auto-centered */}
-      <img
-        src={logoimg}
-        alt="Logo"
-        className="w-48 h-48 md:w-64 md:h-64 rounded-full mb-8"
-      />
+    <section className="bg-[#0f0f0f] text-white py-20 px-[10%] text-center">
+      {/* Clickable circular logo */}
+      <div className="flex justify-center">
+        <Link to="/about">
+          <img
+            id="logo"
+            src={logo}
+            alt="ConVINCE Logo"
+            className="w-64 h-64 rounded-full mx-auto mt-8 mb-8 object-cover hover:opacity-80 transition-opacity"
+          />
+        </Link>
+      </div>
 
-      {/* Even larger heading, centered */}
-      <h1 className="text-7xl md:text-8xl font-bold text-[#ffcc70] text-center">
-        Welcome to Our Portfolio
-      </h1>
+      {/* Title */}
+      <h2 className="text-4xl text-[#ffcc70] mb-8">Welcome to ConVINCE Portfolio</h2>
+
+      {/* Intro */}
+      <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
+        ConVINCE is a team of creative students who love building cool and useful digital stuff.
+        We work together, learn together, and grow together—turning ideas into real projects
+        that showcase our skills and passion for tech.
+      </p>
+
+      {/* Mission & Vision */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto text-left">
+        {/* Mission */}
+        <div>
+          <h3 className="text-2xl text-[#ffcc70] mb-3">Our Mission</h3>
+          <p className="text-gray-300 leading-relaxed">
+            ConVINCE brings together passionate and visionary individuals dedicated to crafting
+            innovative digital solutions. Through collaboration, creativity, and a commitment to
+            excellence, the team showcases its skills, embraces continuous growth, and makes a
+            meaningful impact in the world of technology.
+          </p>
+        </div>
+
+        {/* Vision */}
+        <div>
+          <h3 className="text-2xl text-[#ffcc70] mb-3">Our Vision</h3>
+          <p className="text-gray-300 leading-relaxed">
+            To inspire innovation through collaboration, empowering visionary thinkers to shape
+            the future with cutting-edge ideas, technology, and excellence.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
