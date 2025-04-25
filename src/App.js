@@ -41,8 +41,8 @@ const profiles = {
     ],
     skills: ["Photoshop", "Java", "Php", "Github"],
     resume: "/resume/shaun.pdf",
-    facebook: "https://facebook.com/shaun",
-    instagram: "https://instagram.com/shaun",
+    facebook: "https://www.facebook.com/people/Shaun-Russelle-Obse%C3%B1ares/pfbid06KJfbJKLCiXXYSjPpHyxEFyNC1QCo3pZ61JfXhMro38xGfrr63YAoQ1AgXoNC3dnl/",
+    instagram: "https://www.instagram.com/sishaunlangto/",
   },
   "Kate Justine Pades": {
     image: kateImg,
@@ -55,8 +55,8 @@ const profiles = {
     ],
     skills: ["Canva", "CSS", "HTML"],
     resume: "/resume/pades.pdf",
-    facebook: "https://facebook.com/kate",
-    instagram: "https://instagram.com/kate",
+    facebook: "https://www.facebook.com/katejustine.padesu",
+    instagram: "https://www.instagram.com/_kjpds/",
   },
   "Cristel Nicole Vergara": {
     image: cristelImg,
@@ -69,7 +69,7 @@ const profiles = {
     ],
     skills: ["Canva", "CSS", "HTML", "Tailwind CSS"],
     resume: "/resume/cristel.pdf",
-    facebook: "https://facebook.com/cristel",
+    facebook: "https://www.facebook.com/cristelnicole.vergara",
     instagram: "https://instagram.com/cristel",
   },
   "Cherly Vic Bakilid": {
@@ -83,8 +83,8 @@ const profiles = {
     ],
     skills: ["Document"],
     resume: "/resume/che.pdf",
-    facebook: "https://facebook.com/cherly",
-    instagram: "https://instagram.com/cherly",
+    facebook: "https://www.facebook.com/cherly.vic.9?mibextid=wwXIfr&rdid=hgKzO3CbbmwAYjHJ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15iaf1aSwG%2F%3Fmibextid%3DwwXIfr#",
+    instagram: "https://www.instagram.com/jussstmeeyy?igsh=cDJxOTFtZTU5OWk%3D",
   },
   "Jhon Mark Morales": {
     image: jhonImg,
@@ -98,7 +98,7 @@ const profiles = {
     skills: ["Document"],
     resume: "/resume/jm.pdf",
     facebook: "https://facebook.com/jhon",
-    instagram: "https://instagram.com/jhon",
+    instagram: "https://www.instagram.com/heyy.lusii/",
   },
 };
 

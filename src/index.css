@@ -116,3 +116,87 @@ code {
   transform: scale(1.1);
   box-shadow: 0 0 15px 5px #ffcc00;
 }
+
+
+#logo-nav {
+  position: fixed; /* Keep the logo fixed at the top left */
+  top: 20px;
+  left: 20px;
+  width: 100px; /* Adjusted width */
+  height: 100px; /* Adjusted height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+#logo-nav:hover {
+  transform: scale(1.1); /* Slightly scale up */
+  box-shadow: 0px 0px 30px 10px rgba(255, 140, 0, 1); /* Orange glow */
+}
+
+/* Breathing animation */
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Color change animation */
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg); /* Normal color */
+  }
+  50% {
+    filter: hue-rotate(60deg); /* Change hue (shift color) */
+  }
+  100% {
+    filter: hue-rotate(0deg); /* Back to original color */
+  }
+}
+
+
+
+@keyframes hang-swing {
+  0%   { transform: rotate(10deg); }
+  50%  { transform: rotate(-10deg); }
+  100% { transform: rotate(10deg); }
+}
+
+.animate-swing {
+  animation: hang-swing 1.5s ease-in-out infinite;
+  transform-origin: top center; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* page fade */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+

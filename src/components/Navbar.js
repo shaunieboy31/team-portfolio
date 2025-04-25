@@ -1,42 +1,34 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import logoimg from "../assets/img/logo.jpg";
 
 function Navbar() {
   return (
-    <nav className="w-full py-5 text-center sticky top-0 bg-[#0f0f0f] z-50">
-      <ul className="flex justify-center gap-10 list-none m-0 p-0">
-        <li>
-          <Link to="/" className="text-white hover:text-gray-400 transition">
-            Home
-          </Link>
-        </li>
-        <li>
+    <nav className="bg-[#111] p-4">
+      <div className="container mx-auto flex justify-between items-center">
+      
+      <Link to="/home"> 
+        <img
+          id="logo-nav" 
+          src={logoimg}
+          alt="Logo"
+          className="w-5 h-5 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-5 lg:h-5 rounded-full mb-8 md:mb-0"
+        />
+      </Link>
 
-          <Link to="/portfolio" className="text-white hover:text-gray-400 transition">
-            Portfolio
-          </Link>
-        </li>
-        <li>
-          <Link to="/about" className="text-white hover:text-gray-400 transition">
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="/projects" className="text-white hover:text-gray-400 transition">
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link to="/team" className="text-white hover:text-gray-400 transition">
-            Team
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" className="text-white hover:text-gray-400 transition">
-            Contact
-          </Link>
-        </li>
-      </ul>
+        {/* Menu */}
+        <div className="hidden md:flex space-x-6">
+          <Link to="/" className="text-white">Home</Link>
+          <Link to="/portfolio" className="text-white">Portfolio</Link>
+          <Link to="/projects" className="text-white">Projects</Link>
+          <Link to="/team" className="text-white">Team</Link>
+          <Link to="/contact" className="text-white">Contact</Link>
+        </div>
+
+        {/* Hamburger menu for mobile */}
+        <div className="md:hidden">
+          <button className="text-white">☰</button>
+        </div>
+      </div>
     </nav>
   );
 }

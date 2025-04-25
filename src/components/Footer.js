@@ -1,13 +1,8 @@
-import React from "react";
-
 function Footer() {
   return (
-    <footer className="bg-[#0f0f0f] text-center py-5 text-gray-400">
-      <p className="text-sm">
-        © {new Date().getFullYear()} Your Portfolio. All rights reserved.
-      </p>
-      <p className="text-sm">
-        Built with <span className="text-[#ffcc70]">React</span> and <span className="text-[#ffcc70]">Tailwind CSS</span>.
+    <footer className="bg-[#111] text-center text-white py-6">
+      <p className="text-sm sm:text-base">
+        &copy; {new Date().getFullYear()} ConVINCE Team | All rights reserved.
       </p>
     </footer>
   );
