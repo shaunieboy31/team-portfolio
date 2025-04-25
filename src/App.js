@@ -108,16 +108,23 @@ const projects = [
     title: "UYY BINALOT",
     desc: "A POS system designed for restaurants...",
     img: binalotImg,
-    link: `${process.env.PUBLIC_URL}/projects/Binalots/Binalots/home.html`
+    link: `${process.env.PUBLIC_URL}/projects/Binalots/Binalots/home.html`,
+    languages: ["HTML", "JavaScript", "PHP", "CSS"],
+    details: "A comprehensive point of sale system for managing customer orders, inventory, and payments in restaurants. Built with a focus on ease of use and efficiency.",
+    team: ["Shaun Russelle Obsenares", "Cherly Vic Bakilid", "Cristel Nicole Vergara"]
   },
   {
     title: "KJE PRINTING",
     desc: "A web app for home-based printing...",
     img: kjeImg,
-    video:
-      "https://drive.google.com/file/d/1lTUCwATkYgAIsLMAYJa-KPfhI92x5znz/preview",
-  },
+    video: "https://drive.google.com/file/d/1lTUCwATkYgAIsLMAYJa-KPfhI92x5znz/preview",
+    languages: ["HTML", "JavaScript", "PHP", "CSS"],
+    details: "A web application designed to streamline the printing process for home-based printing businesses, with features like order tracking and payment processing.",
+    team: ["Cristel Nicole Vergara", "Kate Justine Pades", "jhon Mark Morales"]
+  }
 ];
+
+
 
 // Layout component (common structure for the app)
 function Layout() {
