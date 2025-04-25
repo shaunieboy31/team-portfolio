@@ -1,46 +1,90 @@
 import React from "react";
 
 function TeamSection({ profiles }) {
+  // Check if profiles data is available
   if (!profiles || Object.keys(profiles).length === 0) {
     return <p className="text-white">No team profiles available.</p>;
   }
 
-  const getIdFromName = (name) => name.toLowerCase().replace(/\s+/g, '-');
-
   return (
-    <>
-      {Object.keys(profiles).map((name, i) => (
-  <section key={i} id={getIdFromName(name)} className={`py-24 px-5 min-h-screen text-center ${i % 2 === 0 ? 'bg-[#1a1a1a]' : 'bg-[#111]'}`}>
-    <h2 className="text-3xl text-[#ffcc70] mb-5">{name}</h2>
-    <div className="relative inline-block">
-      <div className="w-36 h-36 rounded-lg shadow-lg bg-white relative">
-        <img src={profiles[name].image} alt={name} className="w-full h-full object-cover rounded-lg" />
+    <section id="team" className="py-20 px-[10%] bg-[#0f0f0f]">
+      <h2 className="text-4xl text-[#ffcc70] text-center mb-10">Meet the Team</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {Object.entries(profiles).map(([name, profile], idx) => (
+          <div
+            key={idx}
+            className="bg-[#1a1a1a] border border-[#333] rounded-lg overflow-hidden p-5"
+          >
+            {/* Render the profile image as a circle */}
+            <img
+              src={profile.image}
+              alt={name}
+              className="w-32 h-32 object-cover mb-4 rounded-full mx-auto"
+            />
+            {/* Render the team member's name */}
+            <h3 className="text-[#ffcc70] text-xl font-bold mb-2 text-center">{name}</h3>
+            {/* Render the role */}
+            <p className="text-gray-300 mb-2">
+              <strong>Role:</strong> {profile.role.join(", ")}
+            </p>
+            {/* Render the education */}
+            <p className="text-gray-300 mb-2">
+              <strong>Education:</strong>
+            </p>
+            <ul className="text-gray-300 list-disc list-inside">
+              {profile.education.map((edu, eduIdx) => (
+                <li key={eduIdx}>{edu}</li>
+              ))}
+            </ul>
+            {/* Render the skills */}
+            <p className="text-gray-300 mt-2">
+              <strong>Skills:</strong>
+            </p>
+            <ul className="text-gray-300 list-disc list-inside">
+              {profile.skills.map((skill, skillIdx) => (
+                <li key={skillIdx}>{skill}</li>
+              ))}
+            </ul>
+            {/* Render the resume link if available */}
+            {profile.resume ? (
+              <a
+                href={`${process.env.PUBLIC_URL}${profile.resume}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#ffcc70] hover:underline mt-3 block"
+              >
+                View Resume
+              </a>
+            ) : (
+              <p className="text-gray-400 mt-3 italic text-sm">Resume not available</p>
+            )}
+            {/* Render social media links */}
+            <div className="flex gap-4 mt-4">
+              {profile.facebook && (
+                <a
+                  href={profile.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#ffcc70] hover:underline"
+                >
+                  Facebook
+                </a>
+              )}
+              {profile.instagram && (
+                <a
+                  href={profile.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#ffcc70] hover:underline"
+                >
+                  Instagram
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-    <div className="mt-10">
-      <h2 className="text-2xl text-[#ffcc70] mb-3">Role</h2>
-      <ul className="text-white list-disc list-inside">
-        {profiles[name].role.map((role, r) => <li key={r}>{role}</li>)}
-      </ul>
-      <h2 className="text-2xl text-[#ffcc70] mt-10 mb-3">Education</h2>
-      <ul className="text-white list-disc list-inside">
-        {profiles[name].education.map((edu, j) => <li key={j}>{edu}</li>)}
-      </ul>
-      <h2 className="text-2xl text-[#ffcc70] mt-10 mb-3">Technical Skills</h2>
-      <ul className="text-white list-disc list-inside">
-        {profiles[name].skills.map((skill, k) => <li key={k}>{skill}</li>)}
-      </ul>
-      {profiles[name].resume && (
-        <div className="mt-5">
-          <a href={profiles[name].resume} target="_blank" rel="noopener noreferrer" className="text-[#ffcc70] font-bold hover:underline">
-            📄 View Resume
-          </a>
-        </div>
-      )}
-    </div>
-  </section>
-))}
-    </>
+    </section>
   );
 }
 

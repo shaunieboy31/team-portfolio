@@ -7,8 +7,6 @@ function Contact() {
       <p className="text-gray-300 mb-5">
         Have questions or want to work with us? Feel free to reach out!
       </p>
-
-      {/* Contact Details */}
       <div className="mb-10">
         <p className="text-gray-300 mb-2">
           Email: <a href="mailto:ic.admin@cvsu.edu.ph" className="text-[#ffcc70] hover:underline">ic.admin@cvsu.edu.ph</a>
@@ -16,40 +14,43 @@ function Contact() {
         <p className="text-gray-300 mb-2">
           Phone: <a href="tel:+12364370" className="text-[#ffcc70] hover:underline">0912345678</a>
         </p>
-        <p className="text-gray-300">
-          Follow us on <a href="#" className="text-[#ffcc70] hover:underline">LinkedIn</a> | <a href="#" className="text-[#ffcc70] hover:underline">GitHub</a>
-        </p>
       </div>
 
       {/* Contact Form */}
-      <form className="max-w-lg mx-auto">
+      <form className="max-w-lg mx-auto bg-[#222] p-8 rounded-lg shadow-lg">
         <div className="mb-5">
+          <label htmlFor="name" className="block text-gray-300 text-left mb-2">Name</label>
           <input
             type="text"
-            placeholder="Your Name"
-            className="w-full px-4 py-2 rounded-lg bg-[#222] text-white border border-[#333] focus:outline-none focus:ring-2 focus:ring-[#ffcc70]"
-            required
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            className="w-full p-3 rounded-lg bg-[#333] text-white border border-[#444] focus:outline-none focus:ring-2 focus:ring-[#ffcc70]"
           />
         </div>
         <div className="mb-5">
+          <label htmlFor="email" className="block text-gray-300 text-left mb-2">Email</label>
           <input
             type="email"
-            placeholder="Your Email"
-            className="w-full px-4 py-2 rounded-lg bg-[#222] text-white border border-[#333] focus:outline-none focus:ring-2 focus:ring-[#ffcc70]"
-            required
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            className="w-full p-3 rounded-lg bg-[#333] text-white border border-[#444] focus:outline-none focus:ring-2 focus:ring-[#ffcc70]"
           />
         </div>
         <div className="mb-5">
+          <label htmlFor="message" className="block text-gray-300 text-left mb-2">Message</label>
           <textarea
-            placeholder="Your Message"
+            id="message"
+            name="message"
             rows="5"
-            className="w-full px-4 py-2 rounded-lg bg-[#222] text-white border border-[#333] focus:outline-none focus:ring-2 focus:ring-[#ffcc70]"
-            required
+            placeholder="Enter your message"
+            className="w-full p-3 rounded-lg bg-[#333] text-white border border-[#444] focus:outline-none focus:ring-2 focus:ring-[#ffcc70]"
           ></textarea>
         </div>
         <button
           type="submit"
-          className="bg-[#ffcc70] text-black px-6 py-3 rounded-lg font-bold hover:bg-[#e6b85e] transition"
+          className="w-full bg-[#ffcc70] text-black py-3 rounded-lg font-bold hover:bg-[#e6b85e] transition"
         >
           Send Message
         </button>
