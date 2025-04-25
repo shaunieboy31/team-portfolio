@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/team-portfolio/static/css/main.c642673d.css",
-    "main.js": "/team-portfolio/static/js/main.ca6a7a31.js",
+    "main.css": "/team-portfolio/static/css/main.da893b9e.css",
+    "main.js": "/team-portfolio/static/js/main.3e6c154a.js",
     "static/js/453.eb09c467.chunk.js": "/team-portfolio/static/js/453.eb09c467.chunk.js",
+    "static/media/shaun_russelle_obsenares.jpg": "/team-portfolio/static/media/shaun_russelle_obsenares.7dddd853f7e551b5ac25.jpg",
+    "static/media/cristel_nicole_vergara.jpg": "/team-portfolio/static/media/cristel_nicole_vergara.d028c1fa87c146b3b19a.jpg",
+    "static/media/binalot.png": "/team-portfolio/static/media/binalot.2b59d8e1152898d859e4.png",
+    "static/media/jhon_mark_morales.jpg": "/team-portfolio/static/media/jhon_mark_morales.d45f623d3861e14d2779.jpg",
+    "static/media/cherly_vic_bakilid.jpg": "/team-portfolio/static/media/cherly_vic_bakilid.4165d66408bb22ce1365.jpg",
+    "static/media/logo.jpg": "/team-portfolio/static/media/logo.0dfcb2681cc9147b8529.jpg",
+    "static/media/kje.jpg": "/team-portfolio/static/media/kje.4f9338d742341cd12b90.jpg",
+    "static/media/kate_justine_pades.jpg": "/team-portfolio/static/media/kate_justine_pades.626491b91c862bbf221d.jpg",
     "index.html": "/team-portfolio/index.html",
-    "main.c642673d.css.map": "/team-portfolio/static/css/main.c642673d.css.map",
-    "main.ca6a7a31.js.map": "/team-portfolio/static/js/main.ca6a7a31.js.map",
+    "main.da893b9e.css.map": "/team-portfolio/static/css/main.da893b9e.css.map",
+    "main.3e6c154a.js.map": "/team-portfolio/static/js/main.3e6c154a.js.map",
     "453.eb09c467.chunk.js.map": "/team-portfolio/static/js/453.eb09c467.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c642673d.css",
-    "static/js/main.ca6a7a31.js"
+    "static/css/main.da893b9e.css",
+    "static/js/main.3e6c154a.js"
   ]
 }
